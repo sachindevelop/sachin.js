@@ -150,5 +150,5 @@ else if(character=="constant")
     {
         console.log(count+"x2="+count*2)
     }*/
-   
+
  
