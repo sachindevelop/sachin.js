@@ -1,0 +1,250 @@
+<!--<p id="one"> //dom manipulation ex1
+    sachin
+</p>
+<script>
+    var para=document.getElementById("one")
+    console.log(para.textContent)
+    para.textContent="malini"
+</script>-->
+
+<!--<h1 id="title"> //dom manipulation ex2
+  hello world
+</h1>
+<script>
+    var header=document.getElementById("title")
+    console.log(header.textContent)
+    header.textContent="bye world"
+</script>-->
+
+<!--<h1 id="title">  //event handler
+  hello world
+</h1>
+<button onclick="change()">change</button>
+<script>
+    var header=document.getElementById("title")
+    console.log(header.textContent)
+
+    function change()
+    {
+        console.log(header.textContent="bye world")
+    }
+</script>-->
+
+<!--<input id="num1" value="3">
+<input id="num2" value="4">
+<p id="result"> result</p>
+<button onclick="resultfunction()">add</button>
+<script>
+    var box1=document.getElementById("num1")
+    var box2=document.getElementById("num2")
+    var result=document.getElementById("result")
+    var box1valu=Number(box1.value)
+    var box2valu=Number(box2.value)
+    var total=box1valu+box2valu
+    function resultfunction()
+    {
+        result.textContent=total
+    }
+    
+</script>--->
+
+<!--<input id="num1" type="number">
+<input id="num2" type="number">
+<button onclick="resultfunction()">Add</button>
+<button onclick="resultfun()">sub</button>
+<button onclick="resultf()">mul</button>
+<button onclick="resultdiv()">div</button>
+<p id="result">Result</p>
+
+<script>
+    var box1 = document.getElementById("num1")
+    var box2 = document.getElementById("num2")
+    var result = document.getElementById("result")
+
+
+    function resultfunction() {
+        var box1value = Number(box1.value)
+        var box2value = Number(box2.value)
+        var total = box1value + box2value
+        result.textContent = total
+    }
+        
+    function resultfun() {
+        var box1value = Number(box1.value)
+        var box2value = Number(box2.value)
+        var total = box1value - box2value
+        result.textContent = total
+    }
+        
+    function resultf() {
+        var box1value = Number(box1.value)
+        var box2value = Number(box2.value)
+        var total = box1value * box2value
+        result.textContent = total
+    }
+    
+    function resultdiv() {
+        var box1value = Number(box1.value)
+        var box2value = Number(box2.value)
+        var total = box1value % box2value
+        result.textContent = total
+    }
+</script>-->
+
+<!--<h1>guess the number</h1>
+ <input id="guessnumber" placeholder="Enter number" type="number">
+ <button onclick="check()">check</button>
+ <p id="lucky">your right/wrong</p>
+ <p id="scores">your score:10</p>
+ <script>
+    var guessnumber=document.getElementById("guessnumber")
+    var answer=document.getElementById("lucky")
+    var score=document.getElementById("scores")
+    var randomnumber=Math.floor(Math.random()*10)+1
+    var totalscore=10
+    function check(){
+        var enternumber=guessnumber.value
+        if(randomnumber==enternumber)
+    {
+        console.log("right")
+        answer.textContent="right"
+        alert("you lucky person")
+
+    }
+    else{
+        answer.textContent="wrong"
+        totalscore=totalscore-1
+        scores.textContent="your score:"+totalscore    
+    }
+ }      
+ </script>--> 
+                         <!--setattribute-->
+<!--<style> 
+    div{
+        background-color: black;
+        height: 100px;
+        width: 100px;
+        transition: 2s;
+    }
+    .widthmax{
+        width: 500px;
+    }
+</style>
+ <div id="box>
+ </div>
+ <button onclick="change()">change</button>
+ <script>
+    var box=document.getElementById("box")
+    function change(){
+        box.style.backgroundColor="red"
+        box.setAttribute("class","widthmax")
+    }
+ </script>-->
+
+<!--<input id="inputbox">
+<h1 id="result"></h1>
+<button onclick="reslutf()">text</button>
+<script>
+    var text = document.getElementById("inputbox")
+    var results = document.getElementById("result")
+    function reslutf() {
+        results.textContent = text.value
+    }
+</script>-->
+                                            <!---onkeyupfunction-->
+
+<!--<input id="inputbox" onkeyup="reslutf()">
+<h1 id="result"></h1>
+<script>
+    var text = document.getElementById("inputbox")
+    var results = document.getElementById("result")
+    function reslutf() {
+        results.textContent = text.value
+        console.log(results)
+    }
+</script>-->
+                                     <!--append and create a new element-->
+
+<!--<button onclick="update()">Add hello</button>
+<div id="result">
+</div>
+<script>
+    var div = document.getElementById("result")
+
+    function update() {
+        var listitem = document.createElement("h1")
+        listitem.textContent = "hello"
+        div.append(listitem)
+    }
+</script>--->
+                                     <!---adding style-->
+
+<!--<button id="color" onclick="change()">change color</button>
+<script>
+    var color=document.getElementById("color")
+    function change(){
+        color.style.backgroundColor="red"
+    }
+</script>-->
+
+<!--<h1 id="names">Name</h1>
+<button id="n1" onclick="update()">sachin</button>
+<button id="n2" onclick="update1()" >malini</button>
+<button id="n3" onclick="update2()">shalini</button>
+<script>
+ var name1=document.getElementById("names")
+ var name2=document.getElementById("names ")
+ var name3=document.getElementById("names")
+ 
+ function update(){
+    name1.textContent="sachin"
+ }
+  function update1(){
+    name2.textContent="malini"
+ }
+  function update2(){
+    name3.textContent="shalini"
+  }
+</script>-->
+
+<!--or-->
+                                   <!--event object target-->
+<!---<h1 id="names">name</h1>
+<button onclick="update(event)">sachin</button> 
+<button onclick="update(event)">malini</button>
+<button onclick="update(event)">shalini</button>
+<script>
+    var h1=document.getElementById("names")
+    function update(){
+         h1.textContent=event.target.textContent
+    }
+</script>-->
+                                  <!--event delete or remove->
+
+<!-<h1 onclick="deleteitems(event)">one</h1>
+<h1 onclick="deleteitems(event)">two</h1>
+<h1 onclick="deleteitems(event)">three</h3>
+<script>
+    function deleteitems(event){
+       event.target.remove()
+    }
+</script>-->
+                                                <!---innerhtml-->
+<!---<div id="h1">
+hello
+</div>
+<script>
+    var div=document.getElementById("h1")
+    div.innerHTML="h1"
+</script>-->
+                                     <!--uing queryselector(. , # , tag)-->
+                                
+<!--<div class="one">
+     hello
+</div>
+<h1 class="two">hii</h1>
+<h1 class="three">how</h1>
+<script>
+    var div=document.querySelectorall(".one")
+    console.log(div)
+</script>-->
